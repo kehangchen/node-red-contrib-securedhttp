@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-securedhttp",
+  "version": "1.0.0",
+  "description": "Node-RED node to create secured http endpoint",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kehangchen/node-red-contrib-securedhttp.git"
+  },
+  "license": "Apache",
+  "keywords": [
+    "node-red",
+    "http",
+    "httpin",
+    "httpout"
+  ],
+  "node-red": {
+    "nodes": {
+      "sqldbs": "securedhttp.js"
+    }
+  },
+  "author": {
+    "name": "Kehang Chen"
+  },
+  "contributors": [
+    {
+      "name": "Kehang Chen"
+    }
+  ]
+}
