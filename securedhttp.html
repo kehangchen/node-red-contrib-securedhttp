@@ -16,7 +16,7 @@
 
 <script type="text/x-red" data-template-name="secured http in">
     <div class="form-row">
-        <label for="node-input-method"><i class="fa fa-tasks"></i> <span data-i18n="httpin.label.method"></span></label>
+        <label for="node-input-method"><i class="fa fa-tasks"></i> <span>Method</span></label>
         <select type="text" id="node-input-method" style="width:70%;">
         <option value="get">GET</option>
         <option value="post">POST</option>
@@ -26,12 +26,12 @@
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-url"><i class="fa fa-globe"></i> <span data-i18n="httpin.label.url"></span></label>
+        <label for="node-input-url"><i class="fa fa-globe"></i> <span>URL</span></label>
         <input id="node-input-url" type="text" placeholder="/url">
     </div>
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="common.label.name"></span></label>
-        <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
+        <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
         <label for="node-input-start"><i class="fa fa-play-circle-o"></i> <span>Start</span></label>
@@ -49,7 +49,7 @@
     </div>
     <div class="form-row">
         <label for="node-input-privilege"><i class="fa fa-universal-access"></i> <span>Privileges</span></label>
-        <input type="text" id="node-input-privilege" data-i18n="[placeholder]Privileges">
+        <input type="text" id="node-input-privilege" placeholder="Privileges">
     </div>
     <div class="form-row row-swagger-doc">
         <label for="node-input-swaggerDoc"><i class="fa fa-file-text-o"></i> <span data-i18n="httpin.label.doc"></span></label>
@@ -172,7 +172,7 @@ msg.cookies = {
                 }
                 return "["+this.method+"] "+root;
             } else {
-                return "http";
+                return "securedhttp";
             }
         },
         labelStyle: function() {
