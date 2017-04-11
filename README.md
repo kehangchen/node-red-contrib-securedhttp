@@ -43,4 +43,4 @@ You will need to fill in the following fields:
 
 Authors
 -------
-* Kehang Chen
+* Kehang Chen - [kehangchen@yahoo.com](mailto:kehangchen@yahoo.com)
