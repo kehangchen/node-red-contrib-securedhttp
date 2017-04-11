@@ -3,6 +3,13 @@
   "version": "1.0.1",
   "description": "Node-RED node to create secured http endpoint",
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "is-utf8": "^0.2.1",
+    "media-typer": "^0.3.0",
+    "on-headers": "^1.0.1",
+    "raw-body": "^2.2.0",
     "request": "^2.81.0"
   },
   "repository": {
@@ -14,7 +21,7 @@
     "node-red",
     "http",
     "httpin",
-    "httpout"
+    "securedhttpin"
   ],
   "node-red": {
     "nodes": {

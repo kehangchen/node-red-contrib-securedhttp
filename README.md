@@ -4,7 +4,7 @@ node-red-contrib-securedhttp
 from the default installation but with security built into it.  If 
 secured field is set to false, it has the same features as http in
 in the default installation.  It uses a predefined OAuth endpoint 
-validate the token in authorization header in a request and to check 
+to validate the token in authorization header in a request and to check 
 if the user with the token has privilege to access this node.
 
 Install
@@ -21,11 +21,10 @@ http out nodes but securedhttp in node must be authenticated with a
 token in Authorization header or access_token query string for 
 privileged user to access it if the "Secured" field is set to true.
 When "Secured" field is set to true, user will need to have the
-privilege specified in "Privilege" field.  If the "Privilege" is not
-set but "Secured" field is set to true, user will only need to 
-auhtenticated through the OAuth endpoint with a token.  The OAuth
-user endpoint will need to specify in the settting.js file with 
-"oauth2UserUrl" key.  For example,
+privilege specified in "Privileges" field.  If the "Privileges" is not
+set but "Secured" field is set to true, an access token will need to 
+be validated.  The OAuth user endpoint will need to specify in the 
+settting.js file with "oauth2UserUrl" key.  For example,
 
   oauth2UserUrl: "https://localhost:8080/oauth/user",
 
