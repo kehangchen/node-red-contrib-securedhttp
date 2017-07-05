@@ -36,9 +36,12 @@ You will need to fill in the following fields:
 
 -- Ignore the "Start" field.
 
--- Secured field set to true to enable security.  False to disable.
+-- Secured field is set to true to enable security.  False to disable.
 
--- User will need to have privilege to access this endpoint even the token is valid.
+-- User will need to have privilege to access this endpoint even if the 
+token is valid if this field is set to non-empty string.  Multiple 
+privileges can be specified with comma delimiters but user will need to
+have one of thoese specified privilege to access this endpoint.
 
 
 Authors

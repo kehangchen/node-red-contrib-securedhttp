@@ -186,6 +186,9 @@ module.exports = function(RED) {
             this.privilege = n.privilege;
             this.swaggerDoc = n.swaggerDoc;
 
+            // kchen - modification 7/5/2017
+            this.userDetails = {};
+
             var node = this;
 
             this.errorHandler = function(err,req,res,next) {
@@ -197,11 +200,11 @@ module.exports = function(RED) {
                 var msgid = RED.util.generateId();
                 res._msgid = msgid;
                 if (node.method.match(/^(post|delete|put|options|patch)$/)) {
-                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res),payload:req.body});
+                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res),payload:req.body,"userDetails":node.userDetails});
                 } else if (node.method == "get") {
-                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res),payload:req.query});
+                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res),payload:req.query,"userDetails":node.userDetails});
                 } else {
-                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res)});
+                    node.send({_msgid:msgid,req:req,res:createResponseWrapper(node,res),"userDetails":node.userDetails});
                 }
             };
 
@@ -268,6 +271,8 @@ module.exports = function(RED) {
                                                 break;
                                         }
                                     }
+                                    // kchen - modification 7/5/2017
+                                    node.userDetails.name = node.userDetails.email = decoded.userAuthentication.name;
                                     if (hasRight)         
                                         next();
                                     else {
