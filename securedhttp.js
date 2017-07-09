@@ -273,6 +273,8 @@ module.exports = function(RED) {
                                     }
                                     // kchen - modification 7/5/2017
                                     node.userDetails.name = node.userDetails.email = decoded.userAuthentication.name;
+                                    node.userDetails.authorities = decoded.authorities;
+                                    node.userDetails.token = encrypted;
                                     if (hasRight)         
                                         next();
                                     else {

@@ -25,7 +25,7 @@
   ],
   "node-red": {
     "nodes": {
-      "sqldbs": "securedhttp.js"
+      "securedhttp": "securedhttp.js"
     }
   },
   "author": {
