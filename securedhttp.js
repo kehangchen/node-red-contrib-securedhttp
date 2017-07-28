@@ -272,7 +272,13 @@ module.exports = function(RED) {
                                         }
                                     }
                                     // kchen - modification 7/5/2017
-                                    node.userDetails.name = node.userDetails.email = decoded.userAuthentication.name;
+                                    node.userDetails.name = decoded.userAuthentication.name;
+                                    node.userDetails.email = decoded.details.decodedDetails.userEmail;
+                                    node.userDetails.userLasterName = decoded.details.decodedDetails.userLasterName;
+                                    node.userDetails.userFirstName = decoded.details.decodedDetails.userFirstName;
+                                    node.userDetails.entityName = decoded.details.decodedDetails.entityName;
+                                    node.userDetails.entityId = decoded.details.decodedDetails.entityId;
+                                    node.userDetails.userId = decoded.details.decodedDetails.userId;
                                     node.userDetails.authorities = decoded.authorities;
                                     node.userDetails.token = "bearer " + encrypted;
                                     if (hasRight)         
