@@ -274,7 +274,7 @@ module.exports = function(RED) {
                                     // kchen - modification 7/5/2017
                                     node.userDetails.name = decoded.userAuthentication.name;
                                     node.userDetails.email = decoded.details.decodedDetails.userEmail;
-                                    node.userDetails.userLasterName = decoded.details.decodedDetails.userLasterName;
+                                    node.userDetails.userLastName = decoded.details.decodedDetails.userLastName;
                                     node.userDetails.userFirstName = decoded.details.decodedDetails.userFirstName;
                                     node.userDetails.entityName = decoded.details.decodedDetails.entityName;
                                     node.userDetails.entityId = decoded.details.decodedDetails.entityId;
