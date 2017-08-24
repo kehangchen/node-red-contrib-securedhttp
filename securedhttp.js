@@ -279,6 +279,7 @@ module.exports = function(RED) {
                                     node.userDetails.entityName = decoded.details.decodedDetails.entityName;
                                     node.userDetails.entityId = decoded.details.decodedDetails.entityId;
                                     node.userDetails.userId = decoded.details.decodedDetails.userId;
+                                    node.userDetails.userTitle = decoded.details.decodedDetails.userTitle;
                                     node.userDetails.authorities = decoded.authorities;
                                     node.userDetails.token = "bearer " + encrypted;
                                     if (hasRight)         
